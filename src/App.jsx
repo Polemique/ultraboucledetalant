@@ -185,19 +185,20 @@ export default function App() {
         </div>
       </section>
 
-<section className="py-12 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
-  <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-6 items-center">
+<section className="py-14 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
+  <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
 
+    {/* TEXTE */}
     <div>
       <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-2 font-bold text-xs">
         Parcours
       </p>
 
-      <h2 className="text-3xl font-black uppercase mb-4">
+      <h2 className="text-4xl font-black uppercase mb-5">
         Une boucle accessible à tous
       </h2>
 
-      <div className="space-y-2 text-sm text-white/90">
+      <div className="space-y-3 text-base text-white/90">
 
         <p className="flex gap-2">
           <span className="text-[#ffde59]">•</span>
@@ -211,7 +212,7 @@ export default function App() {
 
         <p className="flex gap-2">
           <span className="text-[#ffde59]">•</span>
-          <span>Parcours <strong className="text-white">sécurisé</strong></span>
+          <span>Parcours <strong className="text-white">sécurisé</strong> et balisé</span>
         </p>
 
         <p className="flex gap-2">
@@ -221,16 +222,17 @@ export default function App() {
 
       </div>
 
-      <p className="mt-4 text-base font-black text-[#ffde59]">
-        Combien de boucles vas-tu faire ?
+      <p className="mt-6 text-lg font-black text-[#ffde59]">
+        Combien de boucles vas-tu enchaîner ?
       </p>
     </div>
 
-    <div className="bg-white/10 border border-white/20 rounded-xl p-3">
+    {/* IMAGE */}
+    <div className="bg-white/10 border border-white/20 rounded-2xl p-4">
       <img
         src="https://i.ibb.co/tpXXW2sP/LOGO-4.png"
-        alt="Parcours"
-        className="rounded-lg w-full object-cover max-h-[260px]"
+        alt="Parcours de la boucle"
+        className="rounded-xl w-full h-[320px] object-cover"
       />
     </div>
 
