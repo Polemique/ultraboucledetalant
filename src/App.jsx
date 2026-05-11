@@ -1,13 +1,26 @@
 export default function App() {
-  const eventDate = new Date('2027-03-14T08:00:00')
+  const eventDate = new Date('2027-03-14T05:00:00')
   const today = new Date()
   const diff = eventDate - today
   const daysRemaining = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)))
 
   const formats = [
-    { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles' },
-    { title: 'Boucle 6H', duration: '6 heures', level: 'Sportifs réguliers' },
-    { title: 'Boucle 12H', duration: '12 heures', level: 'Coureurs confirmés' },
+    { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles', depart: '14h30', fin: '15h30' },
+    { title: 'Boucle 3H', duration: '3 heures', level: 'Sportifs réguliers', depart: '10h00', fin: '13h30' },
+    { title: 'Boucle 12H', duration: '12 heures', level: 'Coureurs confirmés', depart: '05h00', fin: '17h00' },
+  ]
+
+  const horaires = [
+    { time: '04h00', activity: 'Arrivée de l\'équipe organisatrice, installation de la Base Vie' },
+    { time: '04h30', activity: 'Ouverture de l\'accueil et remise des dossards' },
+    { time: '05h00', activity: 'Départ de la Boucle 12h', highlight: true },
+    { time: '10h00', activity: 'Départ de la Boucle 3h', highlight: true },
+    { time: '13h30', activity: 'Fin de la Boucle 3h' },
+    { time: '14h30', activity: 'Départ de la Boucle 1h', highlight: true },
+    { time: '15h30', activity: 'Fin de la Boucle 1h' },
+    { time: '17h00', activity: 'Fin de la Boucle 12h' },
+    { time: '15h00–17h30', activity: 'Temps convivial : restauration, annonce des fonds collectés, discours et remerciements' },
+    { time: '17h00–19h30', activity: 'Démontage du matériel, nettoyage du site, restitution des espaces' },
   ]
 
   return (
@@ -61,12 +74,12 @@ export default function App() {
 
               <div className="bg-black/20 rounded-2xl p-6">
                 <p className="text-[#ffde59] text-sm uppercase mb-2">Boucle</p>
-                <h3 className="text-3xl font-black">2 km</h3>
+                <h3 className="text-3xl font-black">2.52 km</h3>
               </div>
 
               <div className="bg-black/20 rounded-2xl p-6">
                 <p className="text-[#ffde59] text-sm uppercase mb-2">D+</p>
-                <h3 className="text-3xl font-black">40 m</h3>
+                <h3 className="text-3xl font-black">113 m</h3>
               </div>
             </div>
           </div>
@@ -86,12 +99,12 @@ export default function App() {
           
           <h2 className="text-5xl md:text-6xl font-black uppercase mb-8 leading-tight">
             Courir pour
-            <span className="block">École Claire-Aimé</span>
+            <span className="block">École Claire-Aime</span>
           </h2>
 
           <div className="bg-black/5 backdrop-blur-sm border-2 border-black/10 rounded-3xl p-10 mb-8">
             <p className="text-xl md:text-2xl leading-relaxed font-medium">
-              L'association <strong className="font-black">École Claire-Aimé</strong> œuvre au quotidien 
+              L'association <strong className="font-black">École Claire-Aime</strong> œuvre au quotidien 
               pour le développement d'un établissement scolaire adapté aux enfants et adolescents 
               à besoins éducatifs particuliers.
             </p>
@@ -134,9 +147,14 @@ export default function App() {
                     <strong>{format.level}</strong>
                   </div>
 
+                  <div className="flex justify-between border-b pb-3">
+                    <span>Départ</span>
+                    <strong className="text-[#d31b75]">{format.depart}</strong>
+                  </div>
+
                   <div className="flex justify-between pb-3">
-                    <span>Classement</span>
-                    <strong>Tours complétés</strong>
+                    <span>Arrivée</span>
+                    <strong>{format.fin}</strong>
                   </div>
                 </div>
               </div>
@@ -168,11 +186,11 @@ export default function App() {
             <div className="space-y-4 text-lg text-white/90">
               <p className="flex items-start gap-3">
                 <span className="text-[#ffde59] text-2xl">•</span>
-                <span><strong className="text-white">2 km</strong> au cœur de Talant Village</span>
+                <span><strong className="text-white">2.52 km</strong> au cœur de Talant</span>
               </p>
               <p className="flex items-start gap-3">
                 <span className="text-[#ffde59] text-2xl">•</span>
-                <span><strong className="text-white">40 m de D+</strong> par boucle</span>
+                <span><strong className="text-white">113 m de D+</strong> par boucle</span>
               </p>
               <p className="flex items-start gap-3">
                 <span className="text-[#ffde59] text-2xl">•</span>
@@ -189,32 +207,136 @@ export default function App() {
             </p>
           </div>
 
-          <div className="bg-white/10 border border-white/20 rounded-[2rem] h-[400px] flex items-center justify-center text-white/50 text-2xl font-black">
-            IMAGE DE LA BOUCLE
+          <div className="bg-white/10 border border-white/20 rounded-[2rem] p-6 flex items-center justify-center">
+            <img 
+              src="https://i.ibb.co/tpXXW2sP/LOGO-4.png" 
+              alt="Parcours de la boucle"
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#fff4f9] text-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-12">
+            <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-3 font-bold">
+              Planning
+            </p>
+            <h2 className="text-5xl font-black uppercase">Horaires de la journée</h2>
+          </div>
+
+          <div className="bg-white rounded-[2rem] p-8 shadow-2xl max-w-4xl mx-auto">
+            <div className="space-y-4">
+              {horaires.map((horaire, index) => (
+                <div 
+                  key={index} 
+                  className={`flex gap-6 pb-4 border-b last:border-b-0 ${
+                    horaire.highlight ? 'bg-[#d31b75]/5 -mx-4 px-4 py-3 rounded-xl' : ''
+                  }`}
+                >
+                  <div className={`font-black text-lg min-w-[140px] ${
+                    horaire.highlight ? 'text-[#d31b75]' : 'text-black/60'
+                  }`}>
+                    {horaire.time}
+                  </div>
+                  <div className={`text-lg ${horaire.highlight ? 'font-bold' : ''}`}>
+                    {horaire.activity}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-12">
+            <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold">
+              Informations pratiques
+            </p>
+            <h2 className="text-5xl font-black uppercase">Retrait des dossards</h2>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2rem] p-10 max-w-4xl mx-auto">
+            <div className="space-y-6 text-lg">
+              <div className="flex items-start gap-4">
+                <span className="text-[#ffde59] text-3xl">📍</span>
+                <div>
+                  <p className="font-black text-xl mb-2">Lieu</p>
+                  <p className="text-white/90">
+                    Complexe Sportif Marie-Thérèse Eyquem<br />
+                    Chemin des Aiges, 21240 Talant
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <span className="text-[#ffde59] text-3xl">🕐</span>
+                <div>
+                  <p className="font-black text-xl mb-2">Horaires</p>
+                  <p className="text-white/90">
+                    <strong>Samedi :</strong> 14h00 – 18h00<br />
+                    <strong>Dimanche :</strong> Avant 14h00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#fff4f9] text-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-3 font-bold">
+              Soutien
+            </p>
+            <h2 className="text-5xl font-black uppercase">Nos partenaires</h2>
+          </div>
+
+          <div className="bg-white rounded-[2rem] p-16 shadow-2xl text-center">
+            <p className="text-2xl text-black/40 font-bold">
+              Vous souhaitez devenir partenaire ?<br />
+              <span className="text-[#d31b75]">Contactez-nous !</span>
+            </p>
           </div>
         </div>
       </section>
 
       <footer className="bg-[#7d0640] border-t border-white/10 py-12">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-3xl font-black uppercase">
-              Ultra Boucle de Talant
-            </h3>
-            <p className="text-white/70 mt-2">
-              Challenge mental • Dépassement de soi • Solidarité
-            </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+            <div>
+              <h3 className="text-3xl font-black uppercase">
+                Ultra Boucle de Talant
+              </h3>
+              <p className="text-white/70 mt-2">
+                Challenge mental • Dépassement de soi • Solidarité
+              </p>
+            </div>
+
+            <button className="bg-[#ffde59] text-black px-8 py-4 rounded-2xl font-black">
+              Je m'inscris
+            </button>
           </div>
 
-          <button className="bg-[#ffde59] text-black px-8 py-4 rounded-2xl font-black">
-            Je m'inscris
-          </button>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 mt-8 pt-8 border-t border-white/10 text-center text-white/60">
-          <p>
-            Au profit de l'association <strong className="text-[#ffde59]">École Claire-Aimé</strong>
-          </p>
+          <div className="border-t border-white/10 pt-8 text-center space-y-4">
+            <p className="text-white/60">
+              Au profit de l'association <strong className="text-[#ffde59]">École Claire-Aime</strong>
+            </p>
+            
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-white/70 font-bold">Contact</p>
+              <a 
+                href="mailto:contact@ultraboucletalant.fr" 
+                className="text-[#ffde59] hover:text-[#ffde59]/80 transition font-bold text-lg"
+              >
+                contact@ultraboucletalant.fr
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
