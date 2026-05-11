@@ -30,7 +30,7 @@ export default function App() {
             "linear-gradient(rgba(125,6,64,0.7), rgba(211,27,117,0.7)), url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1974&auto=format&fit=crop')",
         }}
       >
-        <div className="max-w-6xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-10 items-center">
+        <div className="max-w-6xl mx-auto px-6 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold text-xs">
               Challenge Mental • Dépassement de Soi
@@ -352,7 +352,7 @@ export default function App() {
   </div>
 </section>
 
-      <section className="py-20 bg-[#fff4f9] text-black">
+      <section className="py-16 lg:py-20 bg-[#fff4f9] text-black">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-3 font-bold text-xs">
