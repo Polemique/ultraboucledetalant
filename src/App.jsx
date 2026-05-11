@@ -11,7 +11,7 @@ export default function App() {
   ]
 
   const horaires = [
-    { time: '04h30', activity: 'Ouverture de l\'accueil et remise des dossards' },
+    { time: '04h30', activity: "Ouverture de l'accueil et remise des dossards" },
     { time: '05h00', activity: 'Départ de la Boucle 12h', highlight: true },
     { time: '10h00', activity: 'Départ de la Boucle 3h', highlight: true },
     { time: '13h30', activity: 'Fin de la Boucle 3h' },
@@ -22,425 +22,205 @@ export default function App() {
   ]
 
   return (
-    <div className="bg-[#5f0230] text-white min-h-screen">
-      <section
-        className="relative min-h-screen bg-cover bg-center flex items-center"
+    <div className="bg-[#5f0230] text-white min-h-screen relative overflow-x-hidden">
+
+      {/* 🌫️ BACKGROUND ANIMATION */}
+      <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-[#ffde59] via-transparent to-[#d31b75] animate-pulse pointer-events-none" />
+
+      {/* HERO */}
+      <section className="relative min-h-screen bg-cover bg-center flex items-center"
         style={{
           backgroundImage:
             "linear-gradient(rgba(125,6,64,0.7), rgba(211,27,117,0.7)), url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1974&auto=format&fit=crop')",
-        }}
-      >
+        }}>
+
         <div className="max-w-6xl mx-auto px-6 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
-          <div>
+
+          <div className="animate-[fadeIn_1s_ease-out]">
             <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold text-xs">
               Challenge Mental • Dépassement de Soi
             </p>
 
             <h1 className="text-5xl md:text-7xl font-black uppercase leading-none mb-6">
               Ultra Boucle
-              <span className="block text-[#ffde59]">de Talant</span>
+              <span className="block text-[#ffde59] animate-pulse">de Talant</span>
             </h1>
 
-            <p className="text-xl font-bold text-white mb-3 leading-tight">
+            <p className="text-xl font-bold mb-3">
               Combien de boucles vas-tu réaliser ?
             </p>
 
-            <p className="text-lg text-white/90 max-w-xl mb-8 leading-relaxed">
-              Repousse tes limites. Une boucle après l'autre. Contre le chrono.
-              Contre toi-même.
-              <strong className="text-[#ffde59]">
-                {' '}
-                Pour une cause qui compte.
-              </strong>
+            <p className="text-lg text-white/90 max-w-xl mb-8">
+              Repousse tes limites. Une boucle après l'autre.
+              <strong className="text-[#ffde59]"> Pour une cause qui compte.</strong>
             </p>
 
-            <button className="bg-[#ffde59] text-black px-7 py-3 rounded-xl font-black text-sm hover:scale-105 transition">
+            <button className="bg-[#ffde59] text-black px-7 py-3 rounded-xl font-black text-sm
+              hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg">
               Je m'inscris
             </button>
           </div>
 
-          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-6">
+          {/* CARDS */}
+          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-6
+            hover:scale-[1.02] transition">
+
             <div className="grid grid-cols-2 gap-3">
-              <div className="bg-black/20 rounded-xl p-4">
-                <p className="text-[#ffde59] text-xs uppercase mb-1 font-bold">
-                  Date
-                </p>
-                <h3 className="text-2xl font-black">14 mars 2027</h3>
-              </div>
 
-              <div className="bg-[#ffde59] text-black rounded-xl p-4">
-                <p className="uppercase text-xs mb-1 font-black">
-                  Countdown
-                </p>
-                <h3 className="text-3xl font-black">{daysRemaining}</h3>
-                <p className="text-sm">jours restants</p>
-              </div>
+              {[
+                { label: "Date", value: "14 mars 2027" },
+                { label: "Countdown", value: daysRemaining + " jours" },
+                { label: "Boucle", value: "2.52 km" },
+                { label: "D+", value: "113 m" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-black/20 rounded-xl p-4 hover:bg-black/30 transition"
+                >
+                  <p className="text-[#ffde59] text-xs uppercase mb-1 font-bold">
+                    {item.label}
+                  </p>
+                  <h3 className="text-2xl font-black">
+                    {item.value}
+                  </h3>
+                </div>
+              ))}
 
-              <div className="bg-black/20 rounded-xl p-4">
-                <p className="text-[#ffde59] text-xs uppercase mb-1 font-bold">
-                  Boucle
-                </p>
-                <h3 className="text-2xl font-black">2.52 km</h3>
-              </div>
-
-              <div className="bg-black/20 rounded-xl p-4">
-                <p className="text-[#ffde59] text-xs uppercase mb-1 font-bold">
-                  D+
-                </p>
-                <h3 className="text-2xl font-black">113 m</h3>
-              </div>
             </div>
           </div>
+
         </div>
       </section>
 
-      <section className="py-16 bg-[#ffde59] text-black">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="uppercase tracking-[0.3em] text-black/70 mb-3 font-bold text-xs">
-            Une course solidaire
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-black uppercase mb-6 leading-tight">
-            Courir pour École Claire-Aime
-          </h2>
-
-          <div className="bg-black/5 backdrop-blur-sm border-2 border-black/10 rounded-2xl p-8 mb-6">
-            <p className="text-lg md:text-xl leading-relaxed font-medium">
-              L'association{' '}
-              <strong className="font-black">École Claire-Aime</strong> œuvre au
-              quotidien pour le développement d'un établissement scolaire adapté
-              aux enfants et adolescents à besoins éducatifs particuliers.
-            </p>
-          </div>
-
-          <p className="text-base font-bold text-black/80">
-            Chaque kilomètre compte. Chaque boucle a du sens.
-          </p>
-        </div>
-      </section>
-
+      {/* FORMATS */}
       <section className="py-16 bg-[#fff4f9] text-black">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex justify-between items-end mb-10 flex-wrap gap-6">
-            <div>
-              <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-2 font-bold text-xs">
-                Les formats
-              </p>
-              <h2 className="text-4xl font-black uppercase">
-                Choisissez votre défi
-              </h2>
-            </div>
 
-            <button className="bg-[#d31b75] text-white px-7 py-3 rounded-xl font-black text-sm hover:scale-105 transition">
-              S'inscrire
-            </button>
+          <div className="mb-10">
+            <p className="uppercase tracking-[0.3em] text-[#d31b75] text-xs font-bold">
+              Les formats
+            </p>
+
+            <h2 className="text-4xl font-black uppercase">
+              Choisissez votre défi
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {formats.map((format, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition"
-              >
-                <h3 className="text-3xl font-black text-[#d31b75] mb-5">
-                  {format.title}
+
+            {formats.map((f, i) => (
+              <div key={i}
+                className="bg-white rounded-2xl p-5 shadow-lg
+                hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+                <h3 className="text-3xl font-black text-[#d31b75] mb-4">
+                  {f.title}
                 </h3>
 
-                <div className="space-y-3 text-base">
-                  <div className="flex justify-between border-b pb-2">
-                    <span>Durée</span>
-                    <strong>{format.duration}</strong>
-                  </div>
-
-                  <div className="flex justify-between border-b pb-2">
-                    <span>Niveau</span>
-                    <strong>{format.level}</strong>
-                  </div>
-
-                  <div className="flex justify-between border-b pb-2">
-                    <span>Départ</span>
-                    <strong className="text-[#d31b75]">
-                      {format.depart}
-                    </strong>
-                  </div>
-
-                  <div className="flex justify-between pb-2">
-                    <span>Arrivée</span>
-                    <strong>{format.fin}</strong>
-                  </div>
+                <div className="space-y-2">
+                  <p><strong>Durée:</strong> {f.duration}</p>
+                  <p><strong>Niveau:</strong> {f.level}</p>
+                  <p><strong className="text-[#d31b75]">Départ:</strong> {f.depart}</p>
+                  <p><strong>Arrivée:</strong> {f.fin}</p>
                 </div>
+
               </div>
             ))}
-          </div>
 
-          <div className="mt-10 bg-gradient-to-br from-[#d31b75] to-[#7d0640] rounded-2xl p-8 text-white text-center">
-            <p className="text-xl md:text-2xl font-black mb-2">
-              « Ce n'est pas contre les autres. C'est contre toi. »
-            </p>
-            <p className="text-base text-white/90">
-              Repousse tes limites. Une boucle à la fois. Aucune pression.
-              Juste toi et ton mental.
-            </p>
           </div>
         </div>
       </section>
 
-<section className="py-14 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
-  <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
+      {/* PARCOURS */}
+      <section className="py-14 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
 
-    {/* TEXTE */}
-    <div>
-      <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-2 font-bold text-xs">
-        Parcours
-      </p>
-
-      <h2 className="text-4xl font-black uppercase mb-5">
-        Une boucle accessible à tous
-      </h2>
-
-      <div className="space-y-3 text-base text-white/90">
-
-        <p className="flex gap-2">
-          <span className="text-[#ffde59]">•</span>
-          <span><strong className="text-white">2.52 km</strong> au cœur de Talant</span>
-        </p>
-
-        <p className="flex gap-2">
-          <span className="text-[#ffde59]">•</span>
-          <span><strong className="text-white">113 m D+</strong> par boucle</span>
-        </p>
-
-        <p className="flex gap-2">
-          <span className="text-[#ffde59]">•</span>
-          <span>Parcours <strong className="text-white">sécurisé</strong> et balisé</span>
-        </p>
-
-        <p className="flex gap-2">
-          <span className="text-[#ffde59]">•</span>
-          <span>Ravitaillement à chaque passage</span>
-        </p>
-
-      </div>
-
-      <p className="mt-6 text-lg font-black text-[#ffde59]">
-        Combien de boucles vas-tu enchaîner ?
-      </p>
-    </div>
-
-    {/* IMAGE */}
-    <div className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center justify-center">
-      <div className="w-full aspect-square max-w-[340px]">
-        <img
-          src="https://i.ibb.co/tpXXW2sP/LOGO-4.png"
-          alt="Parcours de la boucle"
-          className="w-full h-full object-contain rounded-xl"
-        />
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section className="py-12 bg-[#fff4f9] text-black">
-  <div className="max-w-6xl mx-auto px-6">
-
-    <div className="mb-6">
-      <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-1 font-bold text-xs">
-        Planning
-      </p>
-
-      <h2 className="text-3xl font-black uppercase">
-        Horaires
-      </h2>
-    </div>
-
-    <div className="bg-white rounded-xl p-5 shadow-md max-w-4xl mx-auto">
-
-      <div className="space-y-2 text-sm">
-
-        {horaires.map((horaire, index) => (
-          <div
-            key={index}
-            className={`flex gap-3 py-2 border-b last:border-b-0 ${
-              horaire.highlight ? 'bg-[#d31b75]/5 px-2 rounded-md' : ''
-            }`}
-          >
-
-            <div className={`min-w-[90px] font-bold ${
-              horaire.highlight ? 'text-[#d31b75]' : 'text-black/60'
-            }`}>
-              {horaire.time}
-            </div>
-
-            <div className={horaire.highlight ? 'font-semibold' : ''}>
-              {horaire.activity}
-            </div>
-
-          </div>
-        ))}
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section className="py-12 bg-gradient-to-br from-[#d31b75] to-[#7d0640] overflow-hidden">
-  <div className="max-w-6xl mx-auto px-6">
-    
-    <div className="mb-8 text-center">
-      <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-2 font-bold text-xs">
-        Informations pratiques
-      </p>
-
-      <h2 className="text-4xl font-black uppercase">
-        Retrait des dossards
-      </h2>
-    </div>
-
-    <div className="grid lg:grid-cols-2 gap-6 items-stretch">
-      
-      {/* IMAGE */}
-      <div className="relative h-full">
-        <div className="absolute inset-0 bg-[#ffde59]/20 blur-3xl rounded-full"></div>
-
-        <img
-          src="https://i0.wp.com/ecolosport.fr/wp-content/uploads/2021/04/rubon355.png?fit=1397%2C771&ssl=1"
-          alt="Retrait des dossards"
-          className="relative rounded-2xl shadow-xl object-cover w-full h-full max-h-[320px]"
-        />
-      </div>
-
-      {/* INFOS */}
-      <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 flex flex-col justify-center">
-        
-        <div className="border-b border-white/10 pb-4 mb-4">
-          <p className="text-[#ffde59] uppercase tracking-[0.25em] text-xs font-bold mb-2">
-            Lieu
-          </p>
-
-          <h3 className="text-xl font-black mb-1">
-            Complexe Sportif Marie-Thérèse Eyquem
-          </h3>
-
-          <p className="text-white/80 text-sm">
-            Chemin des Aiges — 21240 Talant
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3">
-          <div className="bg-black/20 rounded-xl p-4">
-            <p className="text-[#ffde59] text-xs uppercase font-bold mb-1">
-              Samedi
-            </p>
-            <p className="text-xl font-black">14h–18h</p>
-          </div>
-
-          <div className="bg-black/20 rounded-xl p-4">
-            <p className="text-[#ffde59] text-xs uppercase font-bold mb-1">
-              Dimanche
-            </p>
-            <p className="text-xl font-black">Jusqu’à 14h</p>
-          </div>
-        </div>
-
-        <p className="mt-4 text-white/70 text-xs leading-relaxed">
-          Pièce d’identité + confirmation d’inscription obligatoires pour le retrait du dossard.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <section className="py-16 lg:py-20 bg-[#fff4f9] text-black">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-3 font-bold text-xs">
-              Soutien
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">
-              Nos partenaires
+          <div>
+            <h2 className="text-4xl font-black uppercase mb-5 animate-pulse">
+              Parcours
             </h2>
 
-            <p className="text-black/60 max-w-2xl mx-auto">
-              Ils soutiennent l’Ultra Boucle de Talant et participent au
-              développement d’un événement sportif et solidaire accessible à
-              tous.
+            <p className="mb-6 text-white/90">
+              Une boucle simple mais exigeante.
+            </p>
+
+            <p className="text-[#ffde59] font-black text-lg">
+              Combien de boucles ?
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {[
-              'NovaRun',
-              'Altitude Sport',
-              'Pulse Nutrition',
-              'Urban Move',
-              'Monts & Trail',
-              'Kinetik Studio',
-              'HydraBoost',
-              'Peak Energy',
-            ].map((partner, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition duration-300 flex items-center justify-center min-h-[130px]"
-              >
-                <span className="text-xl md:text-2xl font-black text-[#d31b75] text-center uppercase tracking-wide">
-                  {partner}
-                </span>
-              </div>
-            ))}
+          <div className="bg-white/10 rounded-2xl p-4 flex justify-center">
+            <div className="w-full max-w-[380px] aspect-square">
+              <img
+                src="https://i.ibb.co/tpXXW2sP/LOGO-4.png"
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <button className="bg-[#d31b75] hover:bg-[#b01561] transition text-white px-8 py-4 rounded-2xl font-black">
-              Devenir partenaire
-            </button>
+        </div>
+      </section>
+
+      {/* PLANNING */}
+      <section className="py-12 bg-[#fff4f9] text-black">
+        <div className="max-w-4xl mx-auto px-6">
+
+          <h2 className="text-3xl font-black uppercase mb-6">
+            Planning
+          </h2>
+
+          <div className="bg-white rounded-xl p-5 shadow-md">
+
+            {horaires.map((h, i) => (
+              <div key={i}
+                className={`flex gap-3 py-2 border-b last:border-b-0 ${
+                  h.highlight ? "bg-[#d31b75]/5 px-2 rounded" : ""
+                }`}>
+
+                <span className="min-w-[90px] font-bold text-[#d31b75]">
+                  {h.time}
+                </span>
+
+                <span>{h.activity}</span>
+
+              </div>
+            ))}
+
           </div>
         </div>
       </section>
 
-      <footer className="bg-[#7d0640] border-t border-white/10 py-10">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
-            <div>
-              <h3 className="text-2xl font-black uppercase">
-                Ultra Boucle de Talant
-              </h3>
+      {/* RETRAIT */}
+      <section className="py-14 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
 
-              <p className="text-white/70 mt-1 text-sm">
-                Challenge mental • Dépassement de soi • Solidarité
-              </p>
-            </div>
-
-            <button className="bg-[#ffde59] text-black px-7 py-3 rounded-xl font-black text-sm hover:scale-105 transition">
-              Je m'inscris
-            </button>
-          </div>
-
-          <div className="border-t border-white/10 pt-6 text-center space-y-3">
-            <p className="text-white/60 text-sm">
-              Au profit de l'association{' '}
-              <strong className="text-[#ffde59]">
-                École Claire-Aime
-              </strong>
-            </p>
-
-            <div className="flex flex-col items-center gap-1">
-              <p className="text-white/70 font-bold text-sm">
-                Contact
-              </p>
-
-              <a
-                href="mailto:contact@ultraboucletalant.fr"
-                className="text-[#ffde59] hover:text-[#ffde59]/80 transition font-bold"
-              >
-                contact@ultraboucletalant.fr
-              </a>
-            </div>
-          </div>
+        <div className="max-w-6xl mx-auto px-6 text-center mb-8">
+          <h2 className="text-4xl font-black uppercase animate-pulse">
+            Retrait des dossards
+          </h2>
         </div>
-      </footer>
+
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-6 items-center">
+
+          <img
+            src="https://i0.wp.com/ecolosport.fr/wp-content/uploads/2021/04/rubon355.png"
+            className="rounded-2xl max-h-[320px] w-full object-cover shadow-xl"
+          />
+
+          <div className="bg-white/10 p-6 rounded-2xl">
+
+            <p className="text-[#ffde59] font-bold mb-2">Lieu</p>
+            <p className="mb-4">Complexe Sportif Marie-Thérèse Eyquem</p>
+
+            <p className="text-[#ffde59] font-bold mb-2">Horaires</p>
+            <p>Samedi 14h–18h</p>
+            <p>Dimanche jusqu’à 14h</p>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </div>
   )
 }
