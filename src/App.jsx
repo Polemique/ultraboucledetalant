@@ -11,7 +11,6 @@ export default function App() {
   ]
 
   const horaires = [
-    { time: '04h00', activity: 'Arrivée de l\'équipe organisatrice, installation de la Base Vie' },
     { time: '04h30', activity: 'Ouverture de l\'accueil et remise des dossards' },
     { time: '05h00', activity: 'Départ de la Boucle 12h', highlight: true },
     { time: '10h00', activity: 'Départ de la Boucle 3h', highlight: true },
@@ -20,7 +19,6 @@ export default function App() {
     { time: '15h30', activity: 'Fin de la Boucle 1h' },
     { time: '17h00', activity: 'Fin de la Boucle 12h' },
     { time: '15h00–17h30', activity: 'Temps convivial : restauration, annonce des fonds collectés, discours et remerciements' },
-    { time: '17h00–19h30', activity: 'Démontage du matériel, nettoyage du site, restitution des espaces' },
   ]
 
   return (
