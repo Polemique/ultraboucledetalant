@@ -32,127 +32,119 @@ export default function App() {
             "linear-gradient(rgba(125,6,64,0.7), rgba(211,27,117,0.7)), url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1974&auto=format&fit=crop')",
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-4 font-bold">
+            <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold text-xs">
               Challenge Mental • Dépassement de Soi
             </p>
 
-            <h1 className="text-6xl md:text-8xl font-black uppercase leading-none mb-8">
+            <h1 className="text-5xl md:text-7xl font-black uppercase leading-none mb-6">
               Ultra Boucle
               <span className="block text-[#ffde59]">de Talant</span>
             </h1>
 
-            <p className="text-2xl font-bold text-white mb-4 leading-tight">
+            <p className="text-xl font-bold text-white mb-3 leading-tight">
               Combien de boucles vas-tu réaliser ?
             </p>
 
-            <p className="text-xl text-white/90 max-w-xl mb-10 leading-relaxed">
+            <p className="text-lg text-white/90 max-w-xl mb-8 leading-relaxed">
               Repousse tes limites. Une boucle après l'autre. Contre le chrono. Contre toi-même. 
               <strong className="text-[#ffde59]"> Pour une cause qui compte.</strong>
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-[#ffde59] text-black px-8 py-4 rounded-2xl font-black">
-                Je m'inscris
-              </button>
-            </div>
+            <button className="bg-[#ffde59] text-black px-7 py-3 rounded-xl font-black text-sm">
+              Je m'inscris
+            </button>
           </div>
 
-          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-[2rem] p-8">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-black/20 rounded-2xl p-6">
-                <p className="text-[#ffde59] text-sm uppercase mb-2">Date</p>
-                <h3 className="text-3xl font-black">14 mars 2027</h3>
+          <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-6">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-black/20 rounded-xl p-4">
+                <p className="text-[#ffde59] text-xs uppercase mb-1 font-bold">Date</p>
+                <h3 className="text-2xl font-black">14 mars 2027</h3>
               </div>
 
-              <div className="bg-[#ffde59] text-black rounded-2xl p-6">
-                <p className="uppercase text-sm mb-2 font-black">Countdown</p>
-                <h3 className="text-4xl font-black">{daysRemaining}</h3>
-                <p>jours restants</p>
+              <div className="bg-[#ffde59] text-black rounded-xl p-4">
+                <p className="uppercase text-xs mb-1 font-black">Countdown</p>
+                <h3 className="text-3xl font-black">{daysRemaining}</h3>
+                <p className="text-sm">jours restants</p>
               </div>
 
-              <div className="bg-black/20 rounded-2xl p-6">
-                <p className="text-[#ffde59] text-sm uppercase mb-2">Boucle</p>
-                <h3 className="text-3xl font-black">2.52 km</h3>
+              <div className="bg-black/20 rounded-xl p-4">
+                <p className="text-[#ffde59] text-xs uppercase mb-1 font-bold">Boucle</p>
+                <h3 className="text-2xl font-black">2.52 km</h3>
               </div>
 
-              <div className="bg-black/20 rounded-2xl p-6">
-                <p className="text-[#ffde59] text-sm uppercase mb-2">D+</p>
-                <h3 className="text-3xl font-black">113 m</h3>
+              <div className="bg-black/20 rounded-xl p-4">
+                <p className="text-[#ffde59] text-xs uppercase mb-1 font-bold">D+</p>
+                <h3 className="text-2xl font-black">113 m</h3>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-[#ffde59] text-black relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-black rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-black rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-          <p className="uppercase tracking-[0.3em] text-black/70 mb-4 font-bold text-sm">
+      <section className="py-16 bg-[#ffde59] text-black">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="uppercase tracking-[0.3em] text-black/70 mb-3 font-bold text-xs">
             Une course solidaire
           </p>
           
-          <h2 className="text-5xl md:text-6xl font-black uppercase mb-8 leading-tight">
-            Courir pour
-            <span className="block">École Claire-Aime</span>
+          <h2 className="text-4xl md:text-5xl font-black uppercase mb-6 leading-tight">
+            Courir pour École Claire-Aime
           </h2>
 
-          <div className="bg-black/5 backdrop-blur-sm border-2 border-black/10 rounded-3xl p-10 mb-8">
-            <p className="text-xl md:text-2xl leading-relaxed font-medium">
+          <div className="bg-black/5 backdrop-blur-sm border-2 border-black/10 rounded-2xl p-8 mb-6">
+            <p className="text-lg md:text-xl leading-relaxed font-medium">
               L'association <strong className="font-black">École Claire-Aime</strong> œuvre au quotidien 
               pour le développement d'un établissement scolaire adapté aux enfants et adolescents 
               à besoins éducatifs particuliers.
             </p>
           </div>
 
-          <p className="text-lg font-bold text-black/80">
+          <p className="text-base font-bold text-black/80">
             Chaque kilomètre compte. Chaque boucle a du sens. 🏃‍♂️💛
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-[#fff4f9] text-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-end mb-12 flex-wrap gap-6">
+      <section className="py-16 bg-[#fff4f9] text-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex justify-between items-end mb-10 flex-wrap gap-6">
             <div>
-              <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-3 font-bold">
+              <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-2 font-bold text-xs">
                 Les formats
               </p>
-              <h2 className="text-5xl font-black uppercase">Choisissez votre défi</h2>
+              <h2 className="text-4xl font-black uppercase">Choisissez votre défi</h2>
             </div>
 
-            <button className="bg-[#d31b75] text-white px-8 py-4 rounded-2xl font-black">
+            <button className="bg-[#d31b75] text-white px-7 py-3 rounded-xl font-black text-sm">
               S'inscrire
             </button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {formats.map((format, index) => (
-              <div key={index} className="bg-white rounded-[2rem] p-8 shadow-2xl">
-                <h3 className="text-4xl font-black text-[#d31b75] mb-6">{format.title}</h3>
+              <div key={index} className="bg-white rounded-2xl p-6 shadow-lg">
+                <h3 className="text-3xl font-black text-[#d31b75] mb-5">{format.title}</h3>
 
-                <div className="space-y-4 text-lg">
-                  <div className="flex justify-between border-b pb-3">
+                <div className="space-y-3 text-base">
+                  <div className="flex justify-between border-b pb-2">
                     <span>Durée</span>
                     <strong>{format.duration}</strong>
                   </div>
 
-                  <div className="flex justify-between border-b pb-3">
+                  <div className="flex justify-between border-b pb-2">
                     <span>Niveau</span>
                     <strong>{format.level}</strong>
                   </div>
 
-                  <div className="flex justify-between border-b pb-3">
+                  <div className="flex justify-between border-b pb-2">
                     <span>Départ</span>
                     <strong className="text-[#d31b75]">{format.depart}</strong>
                   </div>
 
-                  <div className="flex justify-between pb-3">
+                  <div className="flex justify-between pb-2">
                     <span>Arrivée</span>
                     <strong>{format.fin}</strong>
                   </div>
@@ -161,53 +153,53 @@ export default function App() {
             ))}
           </div>
 
-          <div className="mt-12 bg-gradient-to-br from-[#d31b75] to-[#7d0640] rounded-[2rem] p-10 text-white text-center">
-            <p className="text-2xl md:text-3xl font-black mb-3">
+          <div className="mt-10 bg-gradient-to-br from-[#d31b75] to-[#7d0640] rounded-2xl p-8 text-white text-center">
+            <p className="text-xl md:text-2xl font-black mb-2">
               « Ce n'est pas contre les autres. C'est contre toi. »
             </p>
-            <p className="text-lg text-white/90">
+            <p className="text-base text-white/90">
               Repousse tes limites. Une boucle à la fois. Aucune pression. Juste toi et ton mental.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+      <section className="py-16 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-4 font-bold">
+            <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold text-xs">
               Parcours
             </p>
 
-            <h2 className="text-5xl font-black uppercase mb-8">
+            <h2 className="text-4xl font-black uppercase mb-6">
               Une boucle accessible à tous
             </h2>
 
-            <div className="space-y-4 text-lg text-white/90">
+            <div className="space-y-3 text-base text-white/90">
               <p className="flex items-start gap-3">
-                <span className="text-[#ffde59] text-2xl">•</span>
+                <span className="text-[#ffde59] text-xl">•</span>
                 <span><strong className="text-white">2.52 km</strong> au cœur de Talant</span>
               </p>
               <p className="flex items-start gap-3">
-                <span className="text-[#ffde59] text-2xl">•</span>
+                <span className="text-[#ffde59] text-xl">•</span>
                 <span><strong className="text-white">113 m de D+</strong> par boucle</span>
               </p>
               <p className="flex items-start gap-3">
-                <span className="text-[#ffde59] text-2xl">•</span>
+                <span className="text-[#ffde59] text-xl">•</span>
                 <span>Parcours accessible et <strong className="text-white">100% sécurisé</strong></span>
               </p>
               <p className="flex items-start gap-3">
-                <span className="text-[#ffde59] text-2xl">•</span>
+                <span className="text-[#ffde59] text-xl">•</span>
                 <span>Ravitaillement à chaque passage</span>
               </p>
             </div>
 
-            <p className="mt-8 text-2xl font-black text-[#ffde59]">
+            <p className="mt-6 text-xl font-black text-[#ffde59]">
               Combien de fois vas-tu boucler ? 🔄
             </p>
           </div>
 
-          <div className="bg-white/10 border border-white/20 rounded-[2rem] p-6 flex items-center justify-center">
+          <div className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center justify-center">
             <img 
               src="https://i.ibb.co/tpXXW2sP/LOGO-4.png" 
               alt="Parcours de la boucle"
@@ -217,30 +209,30 @@ export default function App() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#fff4f9] text-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12">
-            <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-3 font-bold">
+      <section className="py-16 bg-[#fff4f9] text-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-10">
+            <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-2 font-bold text-xs">
               Planning
             </p>
-            <h2 className="text-5xl font-black uppercase">Horaires de la journée</h2>
+            <h2 className="text-4xl font-black uppercase">Horaires de la journée</h2>
           </div>
 
-          <div className="bg-white rounded-[2rem] p-8 shadow-2xl max-w-4xl mx-auto">
-            <div className="space-y-4">
+          <div className="bg-white rounded-2xl p-6 shadow-lg max-w-4xl mx-auto">
+            <div className="space-y-3">
               {horaires.map((horaire, index) => (
                 <div 
                   key={index} 
-                  className={`flex gap-6 pb-4 border-b last:border-b-0 ${
-                    horaire.highlight ? 'bg-[#d31b75]/5 -mx-4 px-4 py-3 rounded-xl' : ''
+                  className={`flex gap-4 pb-3 border-b last:border-b-0 text-sm ${
+                    horaire.highlight ? 'bg-[#d31b75]/5 -mx-3 px-3 py-2 rounded-lg' : ''
                   }`}
                 >
-                  <div className={`font-black text-lg min-w-[140px] ${
+                  <div className={`font-black min-w-[110px] ${
                     horaire.highlight ? 'text-[#d31b75]' : 'text-black/60'
                   }`}>
                     {horaire.time}
                   </div>
-                  <div className={`text-lg ${horaire.highlight ? 'font-bold' : ''}`}>
+                  <div className={horaire.highlight ? 'font-bold' : ''}>
                     {horaire.activity}
                   </div>
                 </div>
@@ -250,22 +242,22 @@ export default function App() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12">
-            <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold">
+      <section className="py-16 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-10">
+            <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-2 font-bold text-xs">
               Informations pratiques
             </p>
-            <h2 className="text-5xl font-black uppercase">Retrait des dossards</h2>
+            <h2 className="text-4xl font-black uppercase">Retrait des dossards</h2>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-[2rem] p-10 max-w-4xl mx-auto">
-            <div className="space-y-6 text-lg">
+          <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 max-w-3xl mx-auto">
+            <div className="space-y-5 text-base">
               <div className="flex items-start gap-4">
-                <span className="text-[#ffde59] text-3xl">📍</span>
+                <span className="text-[#ffde59] text-2xl">📍</span>
                 <div>
-                  <p className="font-black text-xl mb-2">Lieu</p>
-                  <p className="text-white/90">
+                  <p className="font-black text-lg mb-1">Lieu</p>
+                  <p className="text-white/90 text-sm">
                     Complexe Sportif Marie-Thérèse Eyquem<br />
                     Chemin des Aiges, 21240 Talant
                   </p>
@@ -273,10 +265,10 @@ export default function App() {
               </div>
 
               <div className="flex items-start gap-4">
-                <span className="text-[#ffde59] text-3xl">🕐</span>
+                <span className="text-[#ffde59] text-2xl">🕐</span>
                 <div>
-                  <p className="font-black text-xl mb-2">Horaires</p>
-                  <p className="text-white/90">
+                  <p className="font-black text-lg mb-1">Horaires</p>
+                  <p className="text-white/90 text-sm">
                     <strong>Samedi :</strong> 14h00 – 18h00<br />
                     <strong>Dimanche :</strong> Avant 14h00
                   </p>
@@ -287,17 +279,17 @@ export default function App() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#fff4f9] text-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-3 font-bold">
+      <section className="py-16 bg-[#fff4f9] text-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-2 font-bold text-xs">
               Soutien
             </p>
-            <h2 className="text-5xl font-black uppercase">Nos partenaires</h2>
+            <h2 className="text-4xl font-black uppercase">Nos partenaires</h2>
           </div>
 
-          <div className="bg-white rounded-[2rem] p-16 shadow-2xl text-center">
-            <p className="text-2xl text-black/40 font-bold">
+          <div className="bg-white rounded-2xl p-12 shadow-lg text-center">
+            <p className="text-xl text-black/40 font-bold">
               Vous souhaitez devenir partenaire ?<br />
               <span className="text-[#d31b75]">Contactez-nous !</span>
             </p>
@@ -305,33 +297,33 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="bg-[#7d0640] border-t border-white/10 py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+      <footer className="bg-[#7d0640] border-t border-white/10 py-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
             <div>
-              <h3 className="text-3xl font-black uppercase">
+              <h3 className="text-2xl font-black uppercase">
                 Ultra Boucle de Talant
               </h3>
-              <p className="text-white/70 mt-2">
+              <p className="text-white/70 mt-1 text-sm">
                 Challenge mental • Dépassement de soi • Solidarité
               </p>
             </div>
 
-            <button className="bg-[#ffde59] text-black px-8 py-4 rounded-2xl font-black">
+            <button className="bg-[#ffde59] text-black px-7 py-3 rounded-xl font-black text-sm">
               Je m'inscris
             </button>
           </div>
 
-          <div className="border-t border-white/10 pt-8 text-center space-y-4">
-            <p className="text-white/60">
+          <div className="border-t border-white/10 pt-6 text-center space-y-3">
+            <p className="text-white/60 text-sm">
               Au profit de l'association <strong className="text-[#ffde59]">École Claire-Aime</strong>
             </p>
             
-            <div className="flex flex-col items-center gap-2">
-              <p className="text-white/70 font-bold">Contact</p>
+            <div className="flex flex-col items-center gap-1">
+              <p className="text-white/70 font-bold text-sm">Contact</p>
               <a 
                 href="mailto:contact@ultraboucletalant.fr" 
-                className="text-[#ffde59] hover:text-[#ffde59]/80 transition font-bold text-lg"
+                className="text-[#ffde59] hover:text-[#ffde59]/80 transition font-bold"
               >
                 contact@ultraboucletalant.fr
               </a>
