@@ -227,15 +227,14 @@ export default function App() {
       </p>
     </div>
 
-    {/* IMAGE */}
-    <div className="bg-white/10 border border-white/20 rounded-2xl p-4">
+  <div className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center justify-center">
+    <div className="w-full aspect-square max-w-[340px]">
       <img
         src="https://i.ibb.co/tpXXW2sP/LOGO-4.png"
         alt="Parcours de la boucle"
-        className="rounded-xl w-full h-[320px] object-cover"
+        className="w-full h-full object-contain rounded-xl"
       />
     </div>
-
   </div>
 </section>
 
