@@ -185,106 +185,101 @@ export default function App() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold text-xs">
-              Parcours
-            </p>
+<section className="py-12 bg-gradient-to-br from-[#d31b75] to-[#7d0640]">
+  <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-6 items-center">
 
-            <h2 className="text-4xl font-black uppercase mb-6">
-              Une boucle accessible à tous
-            </h2>
+    <div>
+      <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-2 font-bold text-xs">
+        Parcours
+      </p>
 
-            <div className="space-y-3 text-base text-white/90">
-              <p className="flex items-start gap-3">
-                <span className="text-[#ffde59] text-xl">•</span>
-                <span>
-                  <strong className="text-white">2.52 km</strong> au cœur de
-                  Talant
-                </span>
-              </p>
+      <h2 className="text-3xl font-black uppercase mb-4">
+        Une boucle accessible à tous
+      </h2>
 
-              <p className="flex items-start gap-3">
-                <span className="text-[#ffde59] text-xl">•</span>
-                <span>
-                  <strong className="text-white">113 m de D+</strong> par boucle
-                </span>
-              </p>
+      <div className="space-y-2 text-sm text-white/90">
 
-              <p className="flex items-start gap-3">
-                <span className="text-[#ffde59] text-xl">•</span>
-                <span>
-                  Parcours accessible et{' '}
-                  <strong className="text-white">
-                    100% sécurisé
-                  </strong>
-                </span>
-              </p>
+        <p className="flex gap-2">
+          <span className="text-[#ffde59]">•</span>
+          <span><strong className="text-white">2.52 km</strong> au cœur de Talant</span>
+        </p>
 
-              <p className="flex items-start gap-3">
-                <span className="text-[#ffde59] text-xl">•</span>
-                <span>Ravitaillement à chaque passage</span>
-              </p>
+        <p className="flex gap-2">
+          <span className="text-[#ffde59]">•</span>
+          <span><strong className="text-white">113 m D+</strong> par boucle</span>
+        </p>
+
+        <p className="flex gap-2">
+          <span className="text-[#ffde59]">•</span>
+          <span>Parcours <strong className="text-white">sécurisé</strong></span>
+        </p>
+
+        <p className="flex gap-2">
+          <span className="text-[#ffde59]">•</span>
+          <span>Ravitaillement à chaque passage</span>
+        </p>
+
+      </div>
+
+      <p className="mt-4 text-base font-black text-[#ffde59]">
+        Combien de boucles vas-tu faire ?
+      </p>
+    </div>
+
+    <div className="bg-white/10 border border-white/20 rounded-xl p-3">
+      <img
+        src="https://i.ibb.co/tpXXW2sP/LOGO-4.png"
+        alt="Parcours"
+        className="rounded-lg w-full object-cover max-h-[260px]"
+      />
+    </div>
+
+  </div>
+</section>
+
+<section className="py-12 bg-[#fff4f9] text-black">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <div className="mb-6">
+      <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-1 font-bold text-xs">
+        Planning
+      </p>
+
+      <h2 className="text-3xl font-black uppercase">
+        Horaires
+      </h2>
+    </div>
+
+    <div className="bg-white rounded-xl p-5 shadow-md max-w-4xl mx-auto">
+
+      <div className="space-y-2 text-sm">
+
+        {horaires.map((horaire, index) => (
+          <div
+            key={index}
+            className={`flex gap-3 py-2 border-b last:border-b-0 ${
+              horaire.highlight ? 'bg-[#d31b75]/5 px-2 rounded-md' : ''
+            }`}
+          >
+
+            <div className={`min-w-[90px] font-bold ${
+              horaire.highlight ? 'text-[#d31b75]' : 'text-black/60'
+            }`}>
+              {horaire.time}
             </div>
 
-            <p className="mt-6 text-xl font-black text-[#ffde59]">
-              Combien de fois vas-tu boucler ?
-            </p>
-          </div>
-
-          <div className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center justify-center">
-            <img
-              src="https://i.ibb.co/tpXXW2sP/LOGO-4.png"
-              alt="Parcours de la boucle"
-              className="w-full h-auto rounded-xl"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-[#fff4f9] text-black">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-10">
-            <p className="uppercase tracking-[0.3em] text-[#d31b75] mb-2 font-bold text-xs">
-              Planning
-            </p>
-
-            <h2 className="text-4xl font-black uppercase">
-              Horaires de la journée
-            </h2>
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 shadow-lg max-w-4xl mx-auto">
-            <div className="space-y-3">
-              {horaires.map((horaire, index) => (
-                <div
-                  key={index}
-                  className={`flex gap-4 pb-3 border-b last:border-b-0 text-sm ${
-                    horaire.highlight
-                      ? 'bg-[#d31b75]/5 -mx-3 px-3 py-2 rounded-lg'
-                      : ''
-                  }`}
-                >
-                  <div
-                    className={`font-black min-w-[110px] ${
-                      horaire.highlight
-                        ? 'text-[#d31b75]'
-                        : 'text-black/60'
-                    }`}
-                  >
-                    {horaire.time}
-                  </div>
-
-                  <div className={horaire.highlight ? 'font-bold' : ''}>
-                    {horaire.activity}
-                  </div>
-                </div>
-              ))}
+            <div className={horaire.highlight ? 'font-semibold' : ''}>
+              {horaire.activity}
             </div>
+
           </div>
-        </div>
-      </section>
+        ))}
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <section className="py-12 bg-gradient-to-br from-[#d31b75] to-[#7d0640] overflow-hidden">
   <div className="max-w-6xl mx-auto px-6">
