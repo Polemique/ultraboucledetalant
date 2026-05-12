@@ -76,34 +76,37 @@ export default function App() {
 
             <div className="flex flex-col items-start gap-4">
 
-              {/* CTA PRINCIPAL */}
-              <motion.button
-                whileHover={{ scale: 1.05, backgroundColor: "#fff" }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-[#ffde59] text-black px-8 py-4 rounded-xl font-black text-sm transition-colors shadow-xl"
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+
+            {/* CTA principal */}
+            <motion.button
+              whileHover={{ scale: 1.05, backgroundColor: "#fff" }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#ffde59] text-black px-10 py-4 rounded-2xl font-black text-sm shadow-xl transition"
+            >
+              Je m'inscris
+            </motion.button>
+
+            {/* liens secondaires propres */}
+            <div className="flex gap-3 text-sm">
+
+              <Link
+                to="/faq"
+                className="px-5 py-2 rounded-xl border border-white/30 text-white/80 hover:text-[#ffde59] hover:border-[#ffde59] transition"
               >
-                Je m'inscris
-              </motion.button>
+                FAQ
+              </Link>
 
-              {/* LIENS SECONDAIRES */}
-              <div className="flex gap-4 text-sm font-bold">
+              <Link
+                to="/reglement"
+                className="px-5 py-2 rounded-xl border border-white/30 text-white/80 hover:text-[#ffde59] hover:border-[#ffde59] transition"
+              >
+                Règlement
+              </Link>
 
-                <Link
-                  to="/faq"
-                  className="text-white/80 hover:text-[#ffde59] transition-colors underline underline-offset-4"
-                >
-                  Lire la FAQ
-                </Link>
-
-                <Link
-                  to="/reglement"
-                  className="text-white/80 hover:text-[#ffde59] transition-colors underline underline-offset-4"
-                >
-                  Consulter le règlement
-                </Link>
-
-              </div>
             </div>
+
+          </div>
           </motion.div>
 
           <motion.div 
