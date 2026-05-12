@@ -103,13 +103,12 @@ export default function App() {
                       Règlement
                     </Link>
 
-                  </div>
+</div>
 
                 </div>
-            </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
