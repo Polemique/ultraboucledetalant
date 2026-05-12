@@ -6,207 +6,165 @@ import { Link } from 'react-router-dom';
 export default function Reglement() {
   const sections = [
     {
-      title: 'La course',
+      title: 'Principe',
       content:
-        "L’Ultra Boucle de Talant est une course pédestre en boucle à allure libre. Les participants doivent réaliser un maximum de tours pendant la durée choisie : 1h, 3h ou 12h."
+        "Course en boucle fermée. Objectif : réaliser un maximum de boucles sur une durée donnée. Chaque boucle est validée au passage chronométré."
     },
     {
-      title: 'Le parcours',
+      title: 'Formats',
       content:
-        "Le circuit mesure environ 2.52 km avec 113 mètres de dénivelé positif. Le parcours est balisé, sécurisé et accessible uniquement aux participants inscrits."
+        "Solo : 6h / 12h / 24h. Relais : 6h (2-4), 12h (2-4), 24h (2-6). Passage de relais uniquement en zone dédiée."
     },
     {
-      title: 'Conditions de participation',
+      title: 'Circuit',
       content:
-        "L’événement est ouvert aux coureurs majeurs licenciés ou non licenciés. Un PPS ou une licence valide devra être fourni avant le retrait du dossard."
+        "Boucle balisée et sécurisée (1 à 5 km). Départ/arrivée identiques. Ravitaillement à chaque tour. Hors parcours = disqualification."
     },
     {
-      title: 'Inscriptions',
+      title: 'Participation',
       content:
-        "Toute inscription est personnelle, ferme et définitive. Aucun échange ou transfert de dossard ne pourra être effectué sans validation de l’organisation."
+        "Ouvert aux majeurs licenciés ou non. Âge minimum 18 ans (20 ans possible sur 24h)."
+    },
+    {
+      title: 'Inscription',
+      content:
+        "Inscription nominative et non transférable sans accord. Nombre de places limité."
+    },
+    {
+      title: 'Matériel',
+      content:
+        "Dossard visible obligatoire, hydratation, frontale si nuit, équipement adapté aux conditions météo."
     },
     {
       title: 'Ravitaillement',
       content:
-        "Un ravitaillement liquide et solide sera disponible à chaque passage de boucle pour les participants."
+        "Disponible à chaque boucle (eau, solide, boisson). Assistance extérieure interdite hors zone."
     },
     {
       title: 'Classement',
       content:
-        "Le classement est établi selon le nombre de boucles effectuées puis selon le temps réalisé. Toute boucle commencée avant la fin du chrono pourra être terminée."
+        "Classement au nombre de boucles, puis au temps de dernière boucle. Boucle validée si terminée dans les délais."
     },
     {
       title: 'Sécurité',
       content:
-        "Les participants doivent respecter les consignes des bénévoles et signaleurs. Toute attitude dangereuse pourra entraîner une disqualification."
+        "Secours sur place et parcours balisé. Respect des signaleurs obligatoire. Signalement des coureurs en difficulté."
     },
     {
-      title: 'Environnement',
+      title: 'Abandon',
       content:
-        "Le respect du parcours et de l’environnement est obligatoire. Tout abandon de déchets sur le circuit entraînera une disqualification."
+        "Abandon possible à tout moment. Le coureur doit prévenir l’organisation et rendre son dossard."
     },
     {
-      title: 'Droit à l’image',
+      title: 'Assurance',
       content:
-        "Les participants autorisent l’organisation à utiliser les images et vidéos réalisées durant l’événement à des fins de communication."
+        "Organisation couverte en responsabilité civile. Non-licenciés doivent avoir une assurance personnelle."
     },
     {
       title: 'Annulation',
       content:
-        "L’organisation se réserve le droit d’annuler ou modifier l’épreuve en cas de conditions météorologiques ou sanitaires défavorables."
+        "Organisation peut modifier, réduire ou annuler selon météo, sécurité ou force majeure."
+    },
+    {
+      title: 'Esprit',
+      content:
+        "Respect, entraide, dépassement de soi et respect du site. Tout comportement antisportif = disqualification."
+    },
+    {
+      title: 'Acceptation',
+      content:
+        "Toute inscription vaut acceptation complète du règlement."
     }
   ];
 
   return (
-    <div className="bg-[#5f0230] text-white min-h-screen overflow-x-hidden">
+    <div className="bg-[#5f0230] text-white min-h-screen">
 
       <Helmet>
-        <title>
-          Règlement – Ultra Boucle de Talant
-        </title>
-
+        <title>Règlement – Ultra Boucle de Talant</title>
         <meta
           name="description"
-          content="Consultez le règlement officiel de l’Ultra Boucle de Talant : participation, sécurité, classement, inscriptions et déroulement de la course."
+          content="Règlement officiel de l’Ultra Boucle de Talant : formats, parcours, sécurité, classement et conditions de participation."
         />
       </Helmet>
 
       {/* HERO */}
-      <section className="relative py-24 bg-gradient-to-br from-[#7d0640] to-[#d31b75] overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-[#7d0640] to-[#d31b75] text-center">
+        <p className="uppercase tracking-[0.3em] text-[#ffde59] text-xs font-bold mb-3">
+          Règlement officiel
+        </p>
 
-        <div className="max-w-5xl mx-auto px-6 text-center">
+        <h1 className="text-5xl md:text-6xl font-black uppercase">
+          Règlement
+        </h1>
 
-          <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-4 font-bold text-xs">
-            Informations officielles
-          </p>
-
-          <h1 className="text-5xl md:text-7xl font-black uppercase leading-none mb-6">
-            Règlement
-          </h1>
-
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Retrouvez les règles officielles de l’Ultra Boucle de Talant :
-            formats, sécurité, inscriptions, classement et déroulement de l’épreuve.
-          </p>
-
-        </div>
+        <p className="mt-4 text-white/90 max-w-2xl mx-auto">
+          Toutes les règles de l’Ultra Boucle de Talant.
+        </p>
       </section>
 
       {/* INTRO */}
-      <section className="py-16 bg-[#ffde59] text-black">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-
-          <motion.div
-            whileHover={{ scale: 1.01 }}
-            className="bg-black/5 border border-black/10 rounded-3xl p-8"
-          >
-            <p className="text-xl md:text-2xl font-black leading-relaxed">
-              « Une boucle après l’autre. Contre le chrono.
-              Contre toi-même. »
-            </p>
-
-            <p className="mt-4 text-black/70">
-              En participant à l’Ultra Boucle de Talant,
-              chaque coureur accepte pleinement le règlement de l’épreuve.
-            </p>
-          </motion.div>
-
-        </div>
+      <section className="py-14 bg-[#ffde59] text-black text-center">
+        <p className="text-xl md:text-2xl font-black">
+          “Une boucle après l’autre. Jusqu’au bout.”
+        </p>
       </section>
 
-      {/* ARTICLES */}
-      <section className="py-20 bg-[#fff4f9] text-black">
+      {/* CONTENT */}
+      <section className="py-16 bg-[#fff4f9] text-black">
+        <div className="max-w-4xl mx-auto px-6 space-y-5">
 
-        <div className="max-w-5xl mx-auto px-6">
-
-          <div className="space-y-8">
-
-            {sections.map((section, index) => (
-              <motion.div
-                key={index}
-                whileHover={{
-                  y: -4,
-                  boxShadow: "0 20px 30px rgba(0,0,0,0.08)"
-                }}
-                className="bg-white rounded-3xl p-8 shadow-md border border-black/5"
-              >
-
-                <div className="flex items-center gap-4 mb-5">
-
-                  <div className="w-12 h-12 rounded-2xl bg-[#d31b75] text-white flex items-center justify-center font-black text-lg">
-                    {index + 1}
-                  </div>
-
-                  <h2 className="text-2xl md:text-3xl font-black text-[#d31b75] uppercase">
-                    {section.title}
-                  </h2>
-
+          {sections.map((s, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ y: -2 }}
+              className="bg-white rounded-2xl p-6 shadow border border-black/5"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-9 h-9 rounded-xl bg-[#d31b75] text-white flex items-center justify-center font-bold text-sm">
+                  {i + 1}
                 </div>
+                <h2 className="text-xl font-black text-[#d31b75] uppercase">
+                  {s.title}
+                </h2>
+              </div>
 
-                <p className="text-lg leading-relaxed text-black/80">
-                  {section.content}
-                </p>
-
-              </motion.div>
-            ))}
-
-          </div>
+              <p className="text-black/80 leading-relaxed">
+                {s.content}
+              </p>
+            </motion.div>
+          ))}
 
           {/* CTA */}
-          <div className="mt-20 text-center">
-
-            <p className="text-lg font-bold mb-6">
-              Vous avez encore des questions ?
-            </p>
+          <div className="text-center pt-10">
+            <p className="font-bold mb-4">Une question ?</p>
 
             <Link to="/faq">
-              <motion.button
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: "#000"
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-[#d31b75] text-white px-8 py-4 rounded-2xl font-black shadow-xl transition-colors"
-              >
-                Lire la FAQ
-              </motion.button>
+              <button className="bg-[#d31b75] text-white px-6 py-3 rounded-xl font-bold">
+                FAQ
+              </button>
             </Link>
-
           </div>
 
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#7d0640] py-10 border-t border-white/10">
+      <footer className="bg-[#7d0640] py-8 text-center border-t border-white/10">
+        <h3 className="text-xl font-black uppercase">
+          Ultra Boucle de Talant
+        </h3>
+        <p className="text-white/70 text-sm mt-1">
+          Course en boucle – endurance & esprit trail
+        </p>
 
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-black uppercase">
-              Ultra Boucle de Talant
-            </h3>
-
-            <p className="text-white/70 text-sm">
-              Trail en boucle solidaire près de Dijon
-            </p>
-          </div>
-
-          <Link to="/">
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "#fff"
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#ffde59] text-black px-8 py-4 rounded-2xl font-black"
-            >
-              Retour à l’accueil
-            </motion.button>
-          </Link>
-
-        </div>
+        <Link to="/">
+          <button className="mt-4 bg-[#ffde59] text-black px-5 py-2 rounded-xl font-bold">
+            Accueil
+          </button>
+        </Link>
       </footer>
+
     </div>
   );
 }
