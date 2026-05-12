@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function App() {
   const eventDate = new Date('2027-03-14T05:00:00');
