@@ -52,7 +52,7 @@ export default function App() {
             transition={{ duration: 0.8 }}
           >
             <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold text-xs">
-              Challenge Mental • Dépassement de Soi
+              ULTRA TRAIL SOLIDAIRE 
             </p>
 
             <h1 className="text-5xl md:text-7xl font-black uppercase leading-none mb-6">
