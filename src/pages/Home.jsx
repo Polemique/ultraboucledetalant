@@ -11,15 +11,15 @@ export default function App() {
 
   const formats = [
     { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles', depart: '14h30', fin: '15h30' },
-    { title: 'Boucle 3H', duration: '3 heures', level: 'Sportifs réguliers', depart: '10h00', fin: '13h30' },
+    { title: 'Boucle 6H', duration: '6 heures', level: 'Sportifs réguliers et confirmés', depart: '10h00', fin: '16h00' },
     { title: 'Boucle 12H', duration: '12 heures', level: 'Coureurs confirmés', depart: '05h00', fin: '17h00' },
   ];
 
   const horaires = [
     { time: '04h30', activity: 'Ouverture de l\'accueil et remise des dossards' },
     { time: '05h00', activity: 'Départ de la Boucle 12h', highlight: true },
-    { time: '10h00', activity: 'Départ de la Boucle 3h', highlight: true },
-    { time: '13h30', activity: 'Fin de la Boucle 3h' },
+    { time: '10h00', activity: 'Départ de la Boucle 6h', highlight: true },
+    { time: '16h00', activity: 'Fin de la Boucle 6h' },
     { time: '14h30', activity: 'Départ de la Boucle 1h', highlight: true },
     { time: '15h30', activity: 'Fin de la Boucle 1h' },
     { time: '17h00', activity: 'Fin de la Boucle 12h' },
