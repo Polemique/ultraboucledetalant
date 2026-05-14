@@ -11,19 +11,48 @@ export default function App() {
   const diff = eventDate - today;
   const daysRemaining = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
 
-  // Compteur de visiteurs - SimpleHitCounter.com (gratuit, sans inscription)
-  useEffect(() => {
-    const fetchVisitorCount = async () => {
-      try {
-        const response = await fetch('https://api.simplehitcounter.com/hit?id=ultraboucledetalant');
+ // Compteur de visiteurs gratuit avec CountAPI
+useEffect(() => {
+  const updateVisitorCount = async () => {
+    try {
+      // Évite de recompter à chaque refresh du même navigateur
+      const alreadyVisited = localStorage.getItem('ultraboucle_visited');
+
+      // Si déjà compté, on récupère juste la valeur actuelle
+      if (alreadyVisited) {
+        const response = await fetch(
+          'https://api.countapi.xyz/get/ultraboucledetalant/visites'
+        );
+
         const data = await response.json();
-        setVisitorCount(data.count);
-      } catch (error) {
-        console.error('Erreur compteur:', error);
+
+        if (data?.value !== undefined) {
+          setVisitorCount(data.value);
+        }
+
+        return;
       }
-    };
-    fetchVisitorCount();
-  }, []);
+
+      // Sinon on incrémente le compteur
+      const response = await fetch(
+        'https://api.countapi.xyz/hit/ultraboucledetalant/visites'
+      );
+
+      const data = await response.json();
+
+      if (data?.value !== undefined) {
+        setVisitorCount(data.value);
+
+        // Marque comme déjà visité
+        localStorage.setItem('ultraboucle_visited', 'true');
+      }
+    } catch (error) {
+      console.error('Erreur compteur :', error);
+    }
+  };
+
+  updateVisitorCount();
+}, []);
 
   const formats = [
     { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles', depart: '14h30', fin: '15h30' },
@@ -369,7 +398,7 @@ export default function App() {
             <p className="text-white/70 text-sm">Solidarité École Claire-Aime</p>
             
             {/* Compteur de visiteurs */}
-            {visitorCount && (
+            {visitorCount !== null && (
               <p className="text-white/50 text-xs mt-2">
                 👥 {visitorCount.toLocaleString('fr-FR')} visiteurs
               </p>
