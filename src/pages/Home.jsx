@@ -310,7 +310,7 @@ useEffect(() => {
             whileHover={{ rotate: 1, scale: 1.02 }}
             className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center justify-center transition-transform"
           >
-            <img src="public/parcours.png" alt="Parcours" className="w-full aspect-square max-w-[340px] object-contain" />
+            <img src="parcours.png" alt="Parcours" className="w-full aspect-square max-w-[340px] object-contain" />
           </motion.div>
         </div>
       </section>
