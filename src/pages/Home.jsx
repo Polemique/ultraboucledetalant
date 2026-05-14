@@ -15,35 +15,33 @@ export default function App() {
 useEffect(() => {
   const updateVisitorCount = async () => {
     try {
-      // Évite de recompter à chaque refresh du même navigateur
       const alreadyVisited = localStorage.getItem('ultraboucle_visited');
 
-      // Si déjà compté, on récupère juste la valeur actuelle
+      // Si déjà visité : lecture simple
       if (alreadyVisited) {
         const response = await fetch(
-          'https://api.countapi.xyz/get/ultraboucledetalant/visites'
+          'https://countapi.mileshilliard.com/api/v1/get/ultraboucledetalant_visites'
         );
 
         const data = await response.json();
 
         if (data?.value !== undefined) {
-          setVisitorCount(data.value);
+          setVisitorCount(Number(data.value));
         }
 
         return;
       }
 
-      // Sinon on incrémente le compteur
+      // Première visite : incrémentation
       const response = await fetch(
-        'https://api.countapi.xyz/hit/ultraboucledetalant/visites'
+        'https://countapi.mileshilliard.com/api/v1/hit/ultraboucledetalant_visites'
       );
 
       const data = await response.json();
 
       if (data?.value !== undefined) {
-        setVisitorCount(data.value);
+        setVisitorCount(Number(data.value));
 
-        // Marque comme déjà visité
         localStorage.setItem('ultraboucle_visited', 'true');
       }
     } catch (error) {
