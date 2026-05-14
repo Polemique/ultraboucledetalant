@@ -321,7 +321,7 @@ export default function App() {
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 flex flex-col justify-center">
               <h3 className="text-xl font-black mb-4">Retrait des dossards</h3>
               <div className="grid grid-cols-2 gap-3 mb-4">
-                {[{ d: 'Samedi', h: '14h–18h' }, { d: 'Dimanche', h: 'Jusqu'à 14h' }].map((slot, i) => (
+                {[{ d: 'Samedi', h: '14h–18h' }, { d: 'Dimanche', h: '8h–14h' }].map((slot, i) => (
                   <motion.div key={i} whileHover={{ y: -3, backgroundColor: "rgba(255,255,255,0.2)" }} className="bg-black/20 rounded-xl p-4 transition-colors">
                     <p className="text-[#ffde59] text-xs uppercase font-bold">{slot.d}</p>
                     <p className="text-xl font-black">{slot.h}</p>
