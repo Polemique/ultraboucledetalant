@@ -438,7 +438,7 @@ useEffect(() => {
 
           {/* Closing line */}
           <div className="pt-6 border-t border-white/10">
-            <p className="text-white text-lg md:text-xl font-medium">
+            <p className="text-[#ffde59] text-lg md:text-xl font-medium">
               Ici, l’effort n’est pas subi. Il est exploré.
             </p>
           </div>
