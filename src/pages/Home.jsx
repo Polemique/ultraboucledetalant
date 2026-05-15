@@ -97,7 +97,7 @@ useEffect(() => {
             transition={{ duration: 0.8 }}
           >
             <p className="uppercase tracking-[0.3em] text-[#ffde59] mb-3 font-bold text-xs">
-              ULTRA TRAIL SOLIDAIRE 
+              FIXED TIME ULTRA TRAIL 
             </p>
 
             <h1 className="text-5xl md:text-7xl font-black uppercase leading-none mb-6">
@@ -114,7 +114,7 @@ useEffect(() => {
               Contre toi-même.
               <strong className="text-[#ffde59]">
                 {' '}
-                Pour une cause qui compte.
+                Là où le mental décide.
               </strong>
             </p>
 
@@ -269,10 +269,10 @@ useEffect(() => {
             className="mt-10 bg-gradient-to-br from-[#d31b75] to-[#7d0640] rounded-2xl p-8 text-white text-center shadow-xl cursor-default"
           >
             <p className="text-xl md:text-2xl font-black mb-2">
-              « Ce n'est pas contre les autres. C'est contre toi. »
+              « Ce n'est pas contre les autres, c'est contre toi. Trois formats. Une seule épreuve mentale. »
             </p>
             <p className="text-base text-white/90">
-              Repousse tes limites. Une boucle à la fois. Aucune pression.
+              Repousse tes limites. Ce qui varie, ce n’est pas l’intensité du combat, mais la manière dont il se révèle.
             </p>
           </motion.div>
         </div>
@@ -385,6 +385,64 @@ useEffect(() => {
           >
             Devenir partenaire
           </motion.button>
+        </div>
+      </section>
+
+      {/* VISION / MANIFESTO SECTION */}
+      <section className="w-full py-24 px-6 md:px-12 bg-black text-white border-t border-white/10">
+        <div className="max-w-4xl mx-auto space-y-16">
+
+          {/* Title */}
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+              Une épreuve, pas une course.
+            </h2>
+            <p className="text-white/60 text-base md:text-lg">
+              Un espace où l’effort devient une expérience, pas seulement un résultat.
+            </p>
+          </div>
+
+          {/* Vision */}
+          <div className="space-y-4">
+            <h3 className="text-xl md:text-2xl font-semibold">
+              Notre vision
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Proposer une épreuve où le chrono n’est qu’un repère, pas une finalité.
+              Un terrain où chaque boucle, chaque heure et chaque format devient une exploration de la résilience.
+              Ici, on cherche à trouver du plaisir dans l’effort, dans la répétition, et dans ce moment où le corps ralentit mais où l’esprit choisit de continuer.
+            </p>
+          </div>
+
+          {/* Why */}
+          <div className="space-y-4">
+            <h3 className="text-xl md:text-2xl font-semibold">
+              Pourquoi ce choix
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Parce que courir longtemps ne suffit pas à dire ce qu’on vaut.
+              Nous avons voulu des formats qui révèlent autre chose : la capacité à rester présent dans l’effort, à accueillir la fatigue, et à découvrir que la persévérance peut aussi être une forme de plaisir.
+            </p>
+          </div>
+
+          {/* Philosophy */}
+          <div className="space-y-4">
+            <h3 className="text-xl md:text-2xl font-semibold">
+              Ce que l’on cherche à provoquer
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Un moment où la course cesse d’être une discipline pour devenir un dialogue intérieur.
+              Où chaque participant apprend à composer avec lui-même, et à trouver quelque chose de juste dans la répétition, l’effort et la durée.
+            </p>
+          </div>
+
+          {/* Closing line */}
+          <div className="pt-6 border-t border-white/10">
+            <p className="text-white text-lg md:text-xl font-medium">
+              Ici, l’effort n’est pas subi. Il est exploré.
+            </p>
+          </div>
+
         </div>
       </section>
 
