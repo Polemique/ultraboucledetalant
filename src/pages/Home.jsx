@@ -396,7 +396,7 @@ useEffect(() => {
           <img
             src="https://images.unsplash.com/photo-1456613820599-bfe244172af5?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxYW5pdHNsZWFyY2h8Mnx8cnVubmluZyUyMGVuZHVyYW5jZXxlbnwwfHwwfHx8MA%3D%3D"
             alt="background endurance"
-            className="w-full h-full object-cover grayscale opacity-30"
+            className="w-full h-full object-cover grayscale opacity-50"
           />
           {/* Dark overlay for readability */}
           <div className="absolute inset-0 bg-black/70" />
