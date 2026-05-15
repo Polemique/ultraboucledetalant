@@ -389,8 +389,21 @@ useEffect(() => {
       </section>
 
       {/* VISION / MANIFESTO SECTION */}
-      <section className="w-full py-24 px-6 md:px-12 bg-black text-white border-t border-white/10">
-        <div className="max-w-4xl mx-auto space-y-16">
+      <section className="relative w-full py-24 px-6 md:px-12 border-t border-white/10 text-white overflow-hidden">
+
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1456613820599-bfe244172af5?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxYW5pdHNsZWFyY2h8Mnx8cnVubmluZyUyMGVuZHVyYW5jZXxlbnwwfHwwfHx8MA%3D%3D"
+            alt="background endurance"
+            className="w-full h-full object-cover grayscale opacity-30"
+          />
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl mx-auto space-y-16">
 
           {/* Title */}
           <div className="space-y-4">
