@@ -61,11 +61,10 @@ useEffect(() => {
   const horaires = [
     { time: '04h30', activity: 'Ouverture de l\'accueil et remise des dossards' },
     { time: '05h00', activity: 'Départ de la Boucle 12h', highlight: true },
-    { time: '10h00', activity: 'Départ de la Boucle 6h', highlight: true },
-    { time: '16h00', activity: 'Fin de la Boucle 6h' },
-    { time: '14h30', activity: 'Départ de la Boucle 1h', highlight: true },
-    { time: '15h30', activity: 'Fin de la Boucle 1h' },
-    { time: '17h00', activity: 'Fin de la Boucle 12h' },
+    { time: '09h00', activity: 'Départ de la Boucle 1h', highlight: true },
+    { time: '10h00', activity: 'Fin de la Boucle 1h' },
+    { time: '11h30', activity: 'Départ de la Boucle 6h', highlight: true },
+    { time: '17h00', activity: 'Fin de la Boucle 12h et 6h' },
     { time: '15h00–17h30', activity: 'Temps convivial : restauration, annonce des fonds collectés, discours et remerciements' },
   ];
 
