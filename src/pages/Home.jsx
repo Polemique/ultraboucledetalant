@@ -53,8 +53,8 @@ useEffect(() => {
 }, []);
 
   const formats = [
-    { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles', depart: '14h30', fin: '15h30' },
-    { title: 'Boucle 6H', duration: '6 heures', level: 'Sportifs réguliers et confirmés', depart: '10h00', fin: '16h00' },
+    { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles', depart: '9h00', fin: '10h00' },
+    { title: 'Boucle 6H', duration: '6 heures', level: 'Sportifs réguliers et confirmés', depart: '11h00', fin: '17h00' },
     { title: 'Boucle 12H', duration: '12 heures', level: 'Coureurs confirmés', depart: '05h00', fin: '17h00' },
   ];
 
@@ -65,7 +65,8 @@ useEffect(() => {
     { time: '10h00', activity: 'Fin de la Boucle 1h' },
     { time: '11h30', activity: 'Départ de la Boucle 6h', highlight: true },
     { time: '17h00', activity: 'Fin de la Boucle 12h et 6h' },
-    { time: '15h00–17h30', activity: 'Temps convivial : restauration, annonce des fonds collectés, discours et remerciements' },
+    { time: '17h00–17h30', activity: 'Dernières arrivées' },
+    { time: '17h30–18h30', activity: 'Temps convivial : restauration, musique, annonce des fonds collectés, discours et remerciements' },
   ];
 
   // Variantes d'animation pour les conteneurs
