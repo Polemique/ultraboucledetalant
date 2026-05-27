@@ -41,6 +41,27 @@ export default function FAQ() {
 
   return (
     <div className="bg-[#5f0230] text-white min-h-screen">
+      <nav className="absolute top-0 left-0 w-full z-50 px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <img src="logo.png" alt="Logo UTB" className="h-16 w-16 object-contain" />
+
+        {/* Liens */}
+        <div className="flex items-center gap-3">
+          <Link to="/faq" className="px-4 py-2 rounded-xl text-white/80 hover:text-[#ffde59] hover:border-[#ffde59] border border-white/30 text-sm font-bold transition">
+            FAQ
+          </Link>
+          <Link to="/reglement" className="px-4 py-2 rounded-xl text-white/80 hover:text-[#ffde59] hover:border-[#ffde59] border border-white/30 text-sm font-bold transition">
+            Règlement
+          </Link>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-[#ffde59] text-black px-5 py-2 rounded-xl font-black text-sm shadow-lg"
+          >
+            Je m'inscris
+          </motion.button>
+        </div>
+      </nav>
 
       <Helmet>
         <title>
