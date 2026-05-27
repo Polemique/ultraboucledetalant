@@ -478,14 +478,6 @@ useEffect(() => {
                 )}
               </div>
             </div>
-            <p className="text-white/70 text-sm">Solidarité École Claire-Aime</p>
-            
-            {/* Compteur de visiteurs */}
-            {visitorCount !== null && (
-              <p className="text-white/50 text-xs mt-2">
-                👥 {visitorCount.toLocaleString('fr-FR')} visiteurs
-              </p>
-            )}
           </div>
 
           <div className="flex flex-col items-center gap-4">

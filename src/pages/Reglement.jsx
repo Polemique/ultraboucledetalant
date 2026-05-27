@@ -185,12 +185,6 @@ export default function Reglement() {
         <p className="text-white/70 text-sm mt-1">
           Course en boucle – endurance & esprit trail
         </p>
-
-        <Link to="/">
-          <button className="mt-4 bg-[#ffde59] text-black px-5 py-2 rounded-xl font-bold hover:scale-105 transition">
-            Accueil
-          </button>
-        </Link>
       </footer>
 
     </div>
