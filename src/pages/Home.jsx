@@ -82,6 +82,9 @@ useEffect(() => {
 
   return (
     <div className="bg-[#5f0230] text-white min-h-screen overflow-x-hidden selection:bg-[#ffde59] selection:text-black">
+      <nav className="absolute top-0 left-0 w-full z-50 px-6 py-4 flex items-center">
+        <img src="/logo.png" alt="Ultra Boucle de Talant" className="h-16 w-16 object-contain" />
+      </nav>
       {/* SECTION HERO */}
       <section
         className="relative min-h-screen bg-cover bg-center flex items-center"
@@ -463,7 +466,16 @@ useEffect(() => {
       <footer className="bg-[#7d0640] py-10 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <h3 className="text-2xl font-black uppercase">Ultra Boucle de Talant</h3>
+            <div className="text-center md:text-left flex items-center gap-4">
+              <img src="/logo.png" alt="Logo UTB" className="h-14 w-14 object-contain" />
+              <div>
+                <h3 className="text-2xl font-black uppercase">Ultra Boucle de Talant</h3>
+                <p className="text-white/70 text-sm">Solidarité École Claire-Aime</p>
+                {visitorCount !== null && (
+                  <p className="text-white/50 text-xs mt-2">👥 {visitorCount.toLocaleString('fr-FR')} visiteurs</p>
+                )}
+              </div>
+            </div>
             <p className="text-white/70 text-sm">Solidarité École Claire-Aime</p>
             
             {/* Compteur de visiteurs */}
