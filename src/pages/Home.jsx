@@ -53,10 +53,10 @@ useEffect(() => {
 }, []);
 
   const formats = [
-    { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles', depart: '9h00', fin: '10h00' },
-    { title: 'Boucle 6H', duration: '6 heures', level: 'Sportifs réguliers et confirmés', depart: '11h00', fin: '17h00' },
-    { title: 'Boucle 12H', duration: '12 heures', level: 'Coureurs confirmés', depart: '05h00', fin: '17h00' },
-    { title: 'Boucle Duo', duration: '1 heure', level: 'Enfants & parents', depart: '14h00', fin: '14h30' },
+    { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles', depart: '9h00', fin: '10h00', special: false  },
+    { title: 'Boucle 6H', duration: '6 heures', level: 'Sportifs réguliers et confirmés', depart: '11h00', fin: '17h00', special: false  },
+    { title: 'Boucle 12H', duration: '12 heures', level: 'Coureurs confirmés', depart: '05h00', fin: '17h00', special: false  },
+    { title: 'Boucle Duo', duration: '1 heure', level: 'Enfants & parents', depart: '14h00', fin: '14h30', special: true  },
 
   ];
 
@@ -248,9 +248,9 @@ useEffect(() => {
                   borderColor: "rgba(211, 27, 117, 0.4)",
                   boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" 
                 }}
-                className="bg-white rounded-2xl p-6 shadow-lg border-2 border-transparent transition-all duration-300 group"
+                className={`${format.special ? 'bg-[#fff4c2] border-[#ffde59]' : 'bg-white border-transparent'} rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 group`}
               >
-                <h3 className="text-3xl font-black text-[#d31b75] mb-5 group-hover:scale-105 transition-transform origin-left">
+                <h3 className={`text-3xl font-black mb-5 group-hover:scale-105 transition-transform origin-left ${format.special ? 'text-[#b8860b]' : 'text-[#d31b75]'}`}>
                   {format.title}
                 </h3>
 
