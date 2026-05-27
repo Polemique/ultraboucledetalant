@@ -150,25 +150,6 @@ useEffect(() => {
                     Je m'inscris
                   </motion.button>
 
-                  {/* liens secondaires propres */}
-                  <div className="flex gap-3 text-sm">
-
-                    <Link
-                      to="/faq"
-                      className="px-5 py-2 rounded-xl border border-white/30 text-white/80 hover:text-[#ffde59] hover:border-[#ffde59] transition"
-                    >
-                      FAQ
-                    </Link>
-
-                    <Link
-                      to="/reglement"
-                      className="px-5 py-2 rounded-xl border border-white/30 text-white/80 hover:text-[#ffde59] hover:border-[#ffde59] transition"
-                    >
-                      Règlement
-                    </Link>
-
-</div>
-
                 </div>
           </motion.div>
 
