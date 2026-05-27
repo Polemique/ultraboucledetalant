@@ -47,6 +47,9 @@ export default function FAQ() {
 
         {/* Liens */}
         <div className="flex items-center gap-3">
+          <Link to="/" className="px-4 py-2 rounded-xl text-black bg-[#ffde59] hover:bg-white text-sm font-black transition">
+            Home
+          </Link>
           <Link to="/faq" className="px-4 py-2 rounded-xl text-white/80 hover:text-[#ffde59] hover:border-[#ffde59] border border-white/30 text-sm font-bold transition">
             FAQ
           </Link>
