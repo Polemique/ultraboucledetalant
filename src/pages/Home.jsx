@@ -254,7 +254,7 @@ useEffect(() => {
                   {format.title}
                 </h3>
 
-                <div className="space-y-3 text-base">
+                <div className="space-y-3 text-sm">
                   {[
                     { l: 'Durée', v: format.duration },
                     { l: 'Niveau', v: format.level },
