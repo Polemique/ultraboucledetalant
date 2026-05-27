@@ -56,6 +56,8 @@ useEffect(() => {
     { title: 'Boucle 1H', duration: '1 heure', level: 'Débutants & familles', depart: '9h00', fin: '10h00' },
     { title: 'Boucle 6H', duration: '6 heures', level: 'Sportifs réguliers et confirmés', depart: '11h00', fin: '17h00' },
     { title: 'Boucle 12H', duration: '12 heures', level: 'Coureurs confirmés', depart: '05h00', fin: '17h00' },
+    { title: 'Boucle Duo', duration: '1 heure', level: 'Enfants & parents', depart: '14h00', fin: '14h30' },
+
   ];
 
   const horaires = [
@@ -235,7 +237,7 @@ useEffect(() => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {formats.map((format, index) => (
               <motion.div
