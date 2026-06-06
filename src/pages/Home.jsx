@@ -168,8 +168,8 @@ useEffect(() => {
               {[
                 { label: 'Date', value: '14 mars 2027', color: 'text-[#ffde59]' },
                 { label: 'Countdown', value: daysRemaining, sub: 'jours restants', special: true },
-                { label: 'Boucle', value: '2.52 km', color: 'text-[#ffde59]' },
-                { label: 'D+', value: '113 m', color: 'text-[#ffde59]' }
+                { label: 'Boucle', value: '2.72 km', color: 'text-[#ffde59]' },
+                { label: 'D+', value: '63 m', color: 'text-[#ffde59]' }
               ].map((stat, i) => (
                 <motion.div 
                   key={i}
@@ -294,8 +294,8 @@ useEffect(() => {
 
             <div className="space-y-3 text-base text-white/90">
               {[
-                '2.52 km au cœur de Talant',
-                '113 m D+ par boucle',
+                '2.72 km au cœur de Talant',
+                '63 m D+ par boucle',
                 'Parcours sécurisé et balisé',
                 'Ravitaillement à chaque passage'
               ].map((text, i) => (
@@ -315,7 +315,7 @@ useEffect(() => {
             whileHover={{ rotate: 1, scale: 1.02 }}
             className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center justify-center transition-transform"
           >
-            <img src="parcours.png" alt="Parcours" className="w-full aspect-square max-w-[340px] object-contain" />
+            <iframe src="https://tracedetrail.fr/fr/iframe/10175" allowfullscreen style="border: 0;width: 100%; height: 800px;" scrolling="no"></iframe>
           </motion.div>
         </div>
       </section>
