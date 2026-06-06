@@ -315,7 +315,12 @@ useEffect(() => {
             whileHover={{ rotate: 1, scale: 1.02 }}
             className="bg-white/10 border border-white/20 rounded-2xl p-4 flex items-center justify-center transition-transform"
           >
-            <iframe src="https://tracedetrail.fr/fr/iframe/10175" allowfullscreen style="border: 0;width: 100%; height: 800px;" scrolling="no"></iframe>
+            <iframe
+              src="https://tracedetrail.fr/fr/iframe/10175"
+              allowFullScreen
+              style={{ border: 0, width: "100%", height: "800px" }}
+              scrolling="no"
+            />
           </motion.div>
         </div>
       </section>
