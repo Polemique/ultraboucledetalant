@@ -318,7 +318,7 @@ useEffect(() => {
             <iframe
               src="https://tracedetrail.fr/fr/iframe/10175"
               allowFullScreen
-              style={{ border: 0, width: "100%", height: "800px" }}
+              style={{ border: 0, width: "100%", height: "420px" }}
               scrolling="no"
             />
           </motion.div>
